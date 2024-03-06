@@ -7,9 +7,11 @@ const keys = [
 
  function Keyboard() {
   return (
-    <div >
-
-    </div>
+    <section className="keyboard-container">
+        {keys.map(key=>{
+          return <button key={key}>{key}</button>
+        })}
+    </section>
   )
 }
 
