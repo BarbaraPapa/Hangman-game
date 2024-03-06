@@ -1,7 +1,24 @@
-import React from 'react'
+import "./hangmanWord.css"
 
-export default function HangmanWord() {
+function HangmanWord() {
+
+  const word = "barbara"
+  const guessedLettters =["b"]
+
+
   return (
-    <div>HangmanWord</div>
+    <section className="word-container">
+      {word.split("").map((letter, index) => (
+        <span className="underline"key={index}>
+          <span 
+          style={{
+            visibility: guessedLettters.includes(letter) ? "visible" : "hidden"
+          }}
+          >{letter}</span>
+        </span>
+      ))}
+    </section>
   )
 }
+
+export default HangmanWord

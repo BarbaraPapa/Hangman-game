@@ -14,13 +14,13 @@ function getWord() {
   const [guessedLetters, setGuessedLetters] = useState<string[]>([])
 
   return (
-    <body>
+    <main>
       <h1>Hangman Game</h1>
       <h2>lose/win</h2>
       <HangmanSketch/>
       <HangmanWord/>
       <Keyboard/>
-    </body>
+    </main>
     
   )
 }

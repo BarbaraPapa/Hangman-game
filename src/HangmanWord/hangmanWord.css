@@ -1,0 +1,12 @@
+
+.word-container{
+    display: flex;
+    font-size: 5rem;
+    gap: 2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-transform: uppercase;
+
+    & .underline{
+        border-bottom: 10px solid black;
+    }
+}

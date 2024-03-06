@@ -4,10 +4,10 @@
   width: 16rem;
 
   & .rope {
+    position: absolute;
     height: 50px;
     width: 10px;
     background: black;
-    position: absolute;
     top: 0;
     left: 15.5rem;
   }
@@ -35,29 +35,29 @@
 
 /* body parts */
 .head {
+  position: absolute;
   width: 50px;
   height: 50px;
   border-radius: 100%;
   border: 10px solid #8c04bd;
-  position: absolute;
   top: 50px;
   right: -30px;
 }
 
 .body {
+  position: absolute;
   width: 10px;
   height: 100px;
   background: blue;
-  position: absolute;
   top: 115px;
   right: 0;
 }
 
 .armRight {
+  position: absolute;
   width: 80px;
   height: 10px;
   background: blue;
-  position: absolute;
   top: 140px;
   right: -70px;
   transform: rotate(40deg);
@@ -65,10 +65,10 @@
 }
 
 .armLeft {
+  position: absolute;
   width: 80px;
   height: 10px;
   background: blue;
-  position: absolute;
   top: 140px;
   right: 0px;
   transform: rotate(-40deg);
@@ -76,10 +76,10 @@
 }
 
 .legRight {
+  position: absolute;
   width: 100px;
   height: 10px;
-  background: blue ;
-  position: absolute;
+  background: blue;
   top: 200px;
   right: -90px;
   transform: rotate(60deg);
@@ -87,10 +87,10 @@
 }
 
 .legLeft {
+  position: absolute;
   width: 100px;
   height: 10px;
   background: blue;
-  position: absolute;
   top: 200px;
   right: 0;
   transform: rotate(-60deg);
