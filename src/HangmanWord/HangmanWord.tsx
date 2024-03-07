@@ -1,6 +1,16 @@
 import "./hangmanWord.css"
 
-function HangmanWord() {
+type HangmanWordProps = {
+  guessedLetters: string[]
+  wordToGuess: string
+  
+}
+
+function HangmanWord({
+  guessedLetters,
+  wordToGuess,
+ 
+}: HangmanWordProps) {
 
   const word = "barbara"
   const guessedLettters =["b"]
@@ -8,7 +18,7 @@ function HangmanWord() {
 
   return (
     <section className="word-container">
-      {word.split("").map((letter, index) => (
+      {wordToGuess.split("").map((letter, index) => (
         <span className="underline"key={index}>
           <span 
           style={{
