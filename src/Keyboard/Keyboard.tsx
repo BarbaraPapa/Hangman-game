@@ -9,12 +9,14 @@ type KeyboardProps = {
   activeLetters: string[]
   inactiveLetters: string[]
   addGuessedLetter: (letter: string) => void
+  disabled?: boolean
 }
 
  function Keyboard({
   activeLetters,
   inactiveLetters,
   addGuessedLetter,
+  disabled = false,
 }: KeyboardProps) {
   return (
     <section className="keyboard-container">
@@ -24,7 +26,7 @@ type KeyboardProps = {
           return  <button
           onClick={() => addGuessedLetter(key)}
           className={`${styles.btn} ${isActive ? styles.active : ""} ${isInactive ? styles.inactive : "" }`}   
-          disabled={isInactive || isActive }
+          disabled={isInactive || isActive || disabled }
           key={key}
         >
           {key}
