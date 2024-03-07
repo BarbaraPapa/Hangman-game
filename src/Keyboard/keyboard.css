@@ -18,11 +18,12 @@
 
   & .btnKeyboard:hover:not(:disabled),
   .btnKeyboard:focus:not(:disabled) {
-    background-color: #9ddbe8;
+    background-color: #8adeee;
   }
 
   & .btnKeyboard.active {
-    background-color: #1d899e;
+    background-color: #2f6bd2;
+    color: white;
   }
 
   & .btnKeyboard.inactive {

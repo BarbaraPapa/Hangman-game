@@ -1,7 +1,7 @@
 
 .word-container{
     display: flex;
-    font-size: 5rem;
+    font-size: 3.5rem;
     gap: 2rem;
     text-transform: uppercase;
 

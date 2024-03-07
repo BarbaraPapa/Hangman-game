@@ -61,8 +61,8 @@ function App() {
 
   return (
     <div>
-      <h1>{isWinner && "You Won! - Click enter and try another word"}
-        {isLoser && "You Lose 🫣 - Click enter to try again"}</h1>
+      <h1>{isWinner && "You Won!"}
+        {isLoser && "You Lose 🫣"}</h1>
       <main>
         <HangmanSketch numberOfGuesses={incorrectLetters.length} />
         <HangmanWord reveal={isLoser} guessedLetters={guessedLetters} wordToGuess={wordToGuess} />
@@ -77,3 +77,5 @@ function App() {
 }
 
 export default App
+
+// <a href="https://www.vectorstock.com/royalty-free-vector/tree-and-green-grass-scene-vector-16453795">Vector image by VectorStock / mapichai</a>
