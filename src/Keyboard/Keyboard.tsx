@@ -5,11 +5,30 @@ const keys = [
   "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"
 ];
 
- function Keyboard() {
+type KeyboardProps = {
+  activeLetters: string[]
+  inactiveLetters: string[]
+  addGuessedLetter: (letter: string) => void
+}
+
+ function Keyboard({
+  activeLetters,
+  inactiveLetters,
+  addGuessedLetter,
+}: KeyboardProps) {
   return (
     <section className="keyboard-container">
         {keys.map(key=>{
-          return <button className={`${styles.btnKeyboard}`} key={key}>{key}</button>
+          const isActive = activeLetters.includes(key)
+          const isInactive = inactiveLetters.includes(key)
+          return  <button
+          onClick={() => addGuessedLetter(key)}
+          className={`${styles.btn} ${isActive ? styles.active : ""} ${isInactive ? styles.inactive : "" }`}   
+          disabled={isInactive || isActive }
+          key={key}
+        >
+          {key}
+        </button>
         })}
     </section>
   )
