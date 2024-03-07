@@ -57,7 +57,7 @@ function App() {
     return () => {
       document.removeEventListener("keypress", handler)
     }
-  }, []) 
+  }, [])
 
   return (
     <div>

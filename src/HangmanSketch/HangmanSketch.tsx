@@ -33,21 +33,12 @@ type HangmanDrawingProps = {
 
 function HangmanSketch({ numberOfGuesses }: HangmanDrawingProps) {
     return (
-        <div className="hanger-container">
-           
-           {partsOfBody.slice(0, numberOfGuesses)}
-            
+        <div className="hanger-container">          
+           {partsOfBody.slice(0, numberOfGuesses)}            
             <div className="rope"/>
-
-
             <div className="hanger"/>
-
-
             <div className="pole"/>
-
-
             <div className="base"/>
-
         </div>
     )
 }

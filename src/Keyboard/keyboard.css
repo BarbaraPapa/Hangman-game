@@ -1,4 +1,4 @@
-.keyboard-container {
+.keyboardContainer {
   display: grid;
   grid-template-columns: repeat(13, 1fr);
   gap: 10px;
@@ -7,7 +7,7 @@
   padding: 1rem;
   margin-bottom: 2rem;
 
-  & button {
+  & .btnKeyboard {
     font-size: 1.5rem;
     padding: 0.5rem 0rem;
     text-transform: uppercase;
