@@ -61,17 +61,26 @@ function App() {
 
   return (
     <div>
-      <h1>{isWinner && "You Won!"}
-        {isLoser && "You Lose 🫣"}</h1>
       <main>
         <HangmanSketch numberOfGuesses={incorrectLetters.length} />
-        <HangmanWord reveal={isLoser} guessedLetters={guessedLetters} wordToGuess={wordToGuess} />
+        <section>
+          <h1>{isWinner && "You Won! 🎉"}
+            {isLoser && "You Lose 🫣"}</h1>
+          <div>
+            <HangmanWord reveal={isLoser} guessedLetters={guessedLetters} wordToGuess={wordToGuess} />
+          </div>
+        </section>
       </main>
       <Keyboard
         disabled={isWinner || isLoser}
         activeLetters={guessedLetters.filter(letter => wordToGuess.includes(letter))}
         inactiveLetters={incorrectLetters}
         addGuessedLetter={addGuessedLetter} />
+      <div className="info">
+        <h2>Instruction</h2>
+        <p>To play you can use the keyboard to select letters and press enter to restart the game.</p>
+        <p>Or you can use the mouse to select letters and refresh the page to restart the game.</p>
+      </div>
     </div>
   )
 }
