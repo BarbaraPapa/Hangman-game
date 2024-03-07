@@ -3,13 +3,13 @@ import "./hangmanWord.css"
 type HangmanWordProps = {
   guessedLetters: string[]
   wordToGuess: string
-  
+  reveal?:boolean
 }
 
 function HangmanWord({
   guessedLetters,
   wordToGuess,
- 
+  reveal=false,
 }: HangmanWordProps) {
 
   const word = "barbara"
@@ -22,7 +22,8 @@ function HangmanWord({
         <span className="underline"key={index}>
           <span 
           style={{
-            visibility: guessedLettters.includes(letter) ? "visible" : "hidden"
+            visibility: guessedLettters.includes(letter) || reveal ? "visible" : "hidden",
+            color:!guessedLetters.includes(letter) && reveal ? "red" : "black",           
           }}
           >{letter}</span>
         </span>

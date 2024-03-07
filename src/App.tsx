@@ -27,13 +27,12 @@ function App() {
 
   const addGuessedLetter = useCallback(
     (letter: string) => {
-      if (guessedLetters.includes(letter) || isWinner || isLoser ) return
+      if (guessedLetters.includes(letter) || isWinner || isLoser) return
 
       setGuessedLetters(currentLetters => [...currentLetters, letter])
 
-      console.log(guessedLetters) //!!! 
     },
-    [guessedLetters,isWinner, isLoser]
+    [guessedLetters, isWinner, isLoser]
   )
 
   useEffect(() => {
@@ -58,7 +57,7 @@ function App() {
         {isLoser && "You Lose 🫣 - Refresh to try again"}</h1>
       <main>
         <HangmanSketch numberOfGuesses={incorrectLetters.length} />
-        <HangmanWord guessedLetters={guessedLetters} wordToGuess={wordToGuess} />
+        <HangmanWord reveal={isLoser} guessedLetters={guessedLetters} wordToGuess={wordToGuess} />
       </main>
       <Keyboard
         disabled={isWinner || isLoser}
