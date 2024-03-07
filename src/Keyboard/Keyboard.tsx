@@ -1,4 +1,4 @@
-import "./keyboard.css"
+import styles from "./keyboard.module.css"
 
 const keys = [
   "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
@@ -9,7 +9,7 @@ const keys = [
   return (
     <section className="keyboard-container">
         {keys.map(key=>{
-          return <button key={key}>{key}</button>
+          return <button className={`${styles.btnKeyboard}`} key={key}>{key}</button>
         })}
     </section>
   )

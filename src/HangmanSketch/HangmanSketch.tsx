@@ -26,17 +26,16 @@ const legLeft = (
 
 const partsOfBody = [head, body, armRight, armLeft, legRight, legLeft]
 
+type HangmanDrawingProps = {
+    numberOfGuesses: number
+  }
 
 
-function HangmanSketch() {
+function HangmanSketch({ numberOfGuesses }: HangmanDrawingProps) {
     return (
         <div className="hanger-container">
-            {head} 
-            {body}
-            {armRight}
-            {armLeft}
-            {legRight}
-            {legLeft}
+           
+           {partsOfBody.slice(0, numberOfGuesses)}
             
             <div className="rope"/>
 

@@ -16,7 +16,16 @@
     border-radius: 0.5rem;
   }
 
-  & button:hover{
+  & .btnKeyboard:hover:not(:disabled),
+  .btnKeyboard:focus:not(:disabled) {
     background-color: #9ddbe8;
+  }
+
+  & .btnKeyboard.active {
+    background-color: #1d899e;
+  }
+
+  & .btnKeyboard.inactive {
+    opacity: 0.5;
   }
 }
