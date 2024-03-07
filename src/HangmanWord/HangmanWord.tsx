@@ -12,17 +12,13 @@ function HangmanWord({
   reveal=false,
 }: HangmanWordProps) {
 
-  const word = "barbara"
-  const guessedLettters =["b"]
-
-
   return (
     <section className="word-container">
       {wordToGuess.split("").map((letter, index) => (
         <span className="underline"key={index}>
           <span 
           style={{
-            visibility: guessedLettters.includes(letter) || reveal ? "visible" : "hidden",
+            visibility: guessedLetters.includes(letter) || reveal ? "visible" : "hidden",
             color:!guessedLetters.includes(letter) && reveal ? "red" : "black",           
           }}
           >{letter}</span>

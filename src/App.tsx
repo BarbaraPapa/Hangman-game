@@ -5,8 +5,6 @@ import HangmanSketch from "./HangmanSketch/HangmanSketch"
 import HangmanWord from "./HangmanWord/HangmanWord"
 import Keyboard from "./Keyboard/Keyboard"
 
-
-
 function getWord() {
   return words[Math.floor(Math.random() * words.length)]
 }
@@ -28,9 +26,7 @@ function App() {
   const addGuessedLetter = useCallback(
     (letter: string) => {
       if (guessedLetters.includes(letter) || isWinner || isLoser) return
-
       setGuessedLetters(currentLetters => [...currentLetters, letter])
-
     },
     [guessedLetters, isWinner, isLoser]
   )
@@ -39,22 +35,34 @@ function App() {
     const handler = (e: KeyboardEvent) => {
       const key = e.key
       if (!key.match(/^[a-z]$/)) return
-
       e.preventDefault()
       addGuessedLetter(key)
     }
-
     document.addEventListener("keypress", handler)
-
     return () => {
       document.removeEventListener("keypress", handler)
     }
   }, [guessedLetters])
 
+
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      const key = e.key
+      if (key !== "Enter") return
+      e.preventDefault()
+      setGuessedLetters([])
+      setWordToGuess(getWord())
+    }
+    document.addEventListener("keypress", handler)
+    return () => {
+      document.removeEventListener("keypress", handler)
+    }
+  }, []) 
+
   return (
     <div>
-      <h1>{isWinner && "You Won! - Refresh and try another word"}
-        {isLoser && "You Lose 🫣 - Refresh to try again"}</h1>
+      <h1>{isWinner && "You Won! - Click enter and try another word"}
+        {isLoser && "You Lose 🫣 - Click enter to try again"}</h1>
       <main>
         <HangmanSketch numberOfGuesses={incorrectLetters.length} />
         <HangmanWord reveal={isLoser} guessedLetters={guessedLetters} wordToGuess={wordToGuess} />
@@ -65,7 +73,6 @@ function App() {
         inactiveLetters={incorrectLetters}
         addGuessedLetter={addGuessedLetter} />
     </div>
-
   )
 }
 
