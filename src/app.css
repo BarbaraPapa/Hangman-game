@@ -1,6 +1,14 @@
 h1{
     margin-bottom: 15rem;
     text-align: center;
+    font-size: 3rem;
+
+    font-size: 1rem; 
+    transition: font-size 0.3s ease; 
+}
+
+h1.appear {
+  font-size: 3rem; 
 }
 
 main {
@@ -19,7 +27,7 @@ main {
 .info{
   margin: 4rem auto;
   max-width: 80ch;
-  background-color: #ffffffa3;
+  background-color: #ffffff61;
   padding: 1rem;
   border-radius: 0.5rem;
 

@@ -64,8 +64,10 @@ function App() {
       <main>
         <HangmanSketch numberOfGuesses={incorrectLetters.length} />
         <section>
-          <h1>{isWinner && "You Won! 🎉"}
-            {isLoser && "You Lose 🫣"}</h1>
+          <h1 className={isWinner || isLoser ? "appear" : ""}>
+            {isWinner && "You Won! 🎉"}
+            {isLoser && "You Lose 🫣"}
+          </h1>
           <div>
             <HangmanWord reveal={isLoser} guessedLetters={guessedLetters} wordToGuess={wordToGuess} />
           </div>
