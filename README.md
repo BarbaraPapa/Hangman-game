@@ -12,6 +12,6 @@
 - Typescript
 ---
 ### How to run 
-- Npm install
-- Npm run dev
+- npm install
+- npm run dev
 ---
