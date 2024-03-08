@@ -89,4 +89,3 @@ function App() {
 
 export default App
 
-// <a href="https://www.vectorstock.com/royalty-free-vector/tree-and-green-grass-scene-vector-16453795">Vector image by VectorStock / mapichai</a>
