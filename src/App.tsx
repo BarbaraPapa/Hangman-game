@@ -15,7 +15,7 @@ function getWord(wordList) {
 function App() {
   // State variables to manage the word to guess and guessed letters
   const [wordList, setWordList] = useState(words) 
-  const [wordToGuess, setWordToGuess] = useState(getWord)
+  const [wordToGuess, setWordToGuess] = useState(getWord(wordList))
   const [guessedLetters, setGuessedLetters] = useState<string[]>([])
   const [selectedLanguage, setSelectedLanguage] = useState("english") 
 
