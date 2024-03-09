@@ -1,19 +1,23 @@
 import "./app.css"
 import { useState, useEffect, useCallback } from "react"
 import words from "./wordList.json"
+import italianWords from "./wordList-ita.json" 
+import spanishWords from "./wordList-ita.json" 
 import HangmanSketch from "./HangmanSketch/HangmanSketch"
 import HangmanWord from "./HangmanWord/HangmanWord"
 import Keyboard from "./Keyboard/Keyboard"
 
 // Function to get a random word from the word list
-function getWord() {
-  return words[Math.floor(Math.random() * words.length)]
+function getWord(wordList) {
+  return wordList[Math.floor(Math.random() * wordList.length)]
 }
 
 function App() {
   // State variables to manage the word to guess and guessed letters
+  const [wordList, setWordList] = useState(words) 
   const [wordToGuess, setWordToGuess] = useState(getWord)
   const [guessedLetters, setGuessedLetters] = useState<string[]>([])
+  const [selectedLanguage, setSelectedLanguage] = useState("english") 
 
   // Array of incorrect letters guessed by the player
   const incorrectLetters = guessedLetters.filter(
@@ -58,13 +62,21 @@ function App() {
       if (key !== "Enter") return
       e.preventDefault()
       setGuessedLetters([])
-      setWordToGuess(getWord())
+      setWordToGuess(getWord(wordList)) 
     }
     document.addEventListener("keypress", handler)
     return () => {
       document.removeEventListener("keypress", handler)
     }
-  }, [])
+  }, [wordList]) 
+
+  //Handle change list of words
+  const handleListChange = (newList, language) => {
+    setWordList(newList)
+    setGuessedLetters([])
+    setWordToGuess(getWord(newList))
+    setSelectedLanguage(language) 
+  }
 
   return (
     <div>
@@ -89,11 +101,34 @@ function App() {
         activeLetters={guessedLetters.filter(letter => wordToGuess.includes(letter))}
         inactiveLetters={incorrectLetters}
         addGuessedLetter={addGuessedLetter} />
+
+      {/*buttons to change the word list */}
+      <div>
+        <button
+          onClick={() => handleListChange(words, "english")}
+          className={selectedLanguage === "english" ? "selected" : ""}
+        >
+          English
+        </button>
+        <button
+          onClick={() => handleListChange(italianWords, "italian")}
+          className={selectedLanguage === "italian" ? "selected" : ""}
+        >
+          Italiano
+        </button>
+        <button
+          onClick={() => handleListChange(spanishWords, "spanish")}
+          className={selectedLanguage === "spanish" ? "selected" : ""}
+        >
+          Español
+        </button>
+      </div>
+
       <div className="info">
          {/* Instruction section */}
         <h2>Instruction</h2>
-        <p>To play you can use the keyboard to select letters and press enter to restart the game.</p>
-        <p>Or you can use the mouse to select letters and refresh the page to restart the game.</p>
+        <p>Use the buttons to select the language you want to play with</p> 
+        <p>To play you can use the keyboard or the mouse to select letters and press enter to restart the game.</p>
       </div>
     </div>
   )
