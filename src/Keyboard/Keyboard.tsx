@@ -3,7 +3,7 @@ import "./keyboard.css";
 // Define an array containing all the letters of the alphabet as keys
 const keys = [
   "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
-  "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"
+  "n", "ñ","o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"
 ];
 
 // Define the props interface for the Keyboard component
