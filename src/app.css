@@ -1,14 +1,14 @@
-h1{
-    margin-bottom: 15rem;
-    text-align: center;
-    font-size: 3rem;
+h1 {
+  margin-bottom: 15rem;
+  text-align: center;
+  font-size: 3rem;
 
-    font-size: 1rem; 
-    transition: font-size 0.3s ease; 
+  font-size: 1rem;
+  transition: font-size 0.3s ease;
 }
 
 h1.appear {
-  font-size: 3rem; 
+  font-size: 3rem;
 }
 
 main {
@@ -18,20 +18,49 @@ main {
   margin-bottom: 4rem;
   margin-top: 4rem;
 
-  & section{
+  & section {
     display: flex;
     flex-direction: column;
   }
 }
 
-.info{
-  margin: 4rem auto;
-  max-width: 80ch;
+.select-language {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  & button {
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.4rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #0797f7;
+      color: #fff;
+    }
+  }
+}
+
+.selected {
+  background-color: #0797f7;
+  color: #fff;
+}
+
+.info {
+  margin: 3rem auto;
+  max-width: 72ch;
   background-color: #ffffff61;
   padding: 1rem;
   border-radius: 0.5rem;
 
-  & h2{
+  & h2 {
     margin-bottom: 1rem;
+  }
+
+  & p{
+    margin-bottom: 0.5rem;
   }
 }
