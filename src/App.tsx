@@ -8,10 +8,10 @@ import HangmanWord from "./HangmanWord/HangmanWord"
 import Keyboard from "./Keyboard/Keyboard"
 
 
-type WordList = string[]; //!
+type WordList = string[]; 
 
 // Function to get a random word from the word list
-function getWord(wordList: WordList): string { //!
+function getWord(wordList: WordList): string { 
   return wordList[Math.floor(Math.random() * wordList.length)]
 }
 
