@@ -7,8 +7,11 @@ import HangmanSketch from "./HangmanSketch/HangmanSketch"
 import HangmanWord from "./HangmanWord/HangmanWord"
 import Keyboard from "./Keyboard/Keyboard"
 
+
+type WordList = string[]; //!
+
 // Function to get a random word from the word list
-function getWord(wordList) {
+function getWord(wordList: WordList): string { //!
   return wordList[Math.floor(Math.random() * wordList.length)]
 }
 
@@ -71,7 +74,7 @@ function App() {
   }, [wordList]) 
 
   //Handle change list of words
-  const handleListChange = (newList, language) => {
+  const handleListChange = (newList: WordList, language: string) => {
     setWordList(newList)
     setGuessedLetters([])
     setWordToGuess(getWord(newList))
