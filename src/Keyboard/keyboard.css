@@ -1,6 +1,6 @@
 .keyboardContainer {
   display: grid;
-  grid-template-columns: repeat(13, 1fr);
+  grid-template-columns: repeat(14, 1fr);
   gap: 10px;
   width: 800px;
   margin: 0 auto;
