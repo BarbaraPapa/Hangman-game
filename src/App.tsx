@@ -2,7 +2,7 @@ import "./app.css"
 import { useState, useEffect, useCallback } from "react"
 import words from "./wordList.json"
 import italianWords from "./wordList-ita.json" 
-import spanishWords from "./wordList-ita.json" 
+import spanishWords from "./wordList-esp.json" 
 import HangmanSketch from "./HangmanSketch/HangmanSketch"
 import HangmanWord from "./HangmanWord/HangmanWord"
 import Keyboard from "./Keyboard/Keyboard"
@@ -106,7 +106,7 @@ function App() {
         addGuessedLetter={addGuessedLetter} />
 
       {/*buttons to change the word list */}
-      <div>
+      <div className="select-language">
         <button
           onClick={() => handleListChange(words, "english")}
           className={selectedLanguage === "english" ? "selected" : ""}
