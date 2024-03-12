@@ -24,6 +24,7 @@ main {
   }
 }
 
+/* select language buttons */
 .select-language {
   max-width: 400px;
   margin: 0 auto;
@@ -49,12 +50,13 @@ main {
   color: #fff;
 }
 
+/* instruction */
 .info {
   margin: 3rem auto;
   padding: 8rem;
   background-image: url("./pubblic/v883-mynt-06.jpg");
   background-size: cover;
-  max-width: 70rem;
+  max-width: 58rem;
   display: flex;
   flex-direction: column;
 
@@ -74,4 +76,18 @@ main {
       max-width: 90ch;
     }
   }
+}
+
+/* footer */
+footer{
+  background-color:#a1bde2;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5rem;
+
+ & a{
+  text-decoration: none;
+  color: #fb4b00;
+ }
 }

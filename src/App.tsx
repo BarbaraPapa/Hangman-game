@@ -143,6 +143,10 @@ function App() {
           <p>Para jugar puedes usar el teclado o el mouse para seleccionar letras y presionar enter para reiniciar el juego.</p>
         </section>
       </div>
+      <footer>
+        <p>Created by <a href="https://barbarapapa.github.io/My-Portfolio/" target="_blank">Barbara Papa</a></p>
+        <p>Credits ➡️ <a href="https://www.freepik.com/free-vector/cute-colorful-illustrated-star-frame-beige-background_16329763.htm#page=2&query=kids%20background&position=8&from_view=keyword&track=ais&uuid=1f16b686-1be5-407a-ba61-6b09eba233ee"target="_blank">Image by rawpixel.com</a> on Freepik</p>
+      </footer>
     </div>
   )
 }
