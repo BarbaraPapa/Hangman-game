@@ -129,9 +129,19 @@ function App() {
 
       <div className="info">
          {/* Instruction section */}
-        <h2>Instruction</h2>
-        <p>Use the buttons to select the language you want to play with</p> 
-        <p>To play you can use the keyboard or the mouse to select letters and press enter to restart the game.</p>
+         <h2>Instruction</h2>
+        <section>
+          <p>Use the buttons to select the language you want to play with.</p>
+          <p>To play you can use the keyboard or the mouse to select letters and press enter to restart the game.</p>
+        </section>
+        <section>
+          <p>Utilizza i pulsanti per selezionare la lingua con cui vuoi giocare.</p>
+          <p>Per giocare puoi utilizzare la tastiera o il mouse per selezionare le lettere e premere Invio per riavviare il gioco.</p>
+        </section>
+        <section>
+          <p>Usa los botones para seleccionar el idioma con el que quieres jugar.</p>
+          <p>Para jugar puedes usar el teclado o el mouse para seleccionar letras y presionar enter para reiniciar el juego.</p>
+        </section>
       </div>
     </div>
   )

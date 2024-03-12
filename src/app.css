@@ -16,7 +16,7 @@ main {
   align-items: flex-end;
   justify-content: space-around;
   margin-bottom: 4rem;
-  margin-top: 4rem;
+  margin-top: 15rem;
 
   & section {
     display: flex;
@@ -37,7 +37,7 @@ main {
     padding: 0.4rem;
     cursor: pointer;
 
-    & button:hover {
+    &:hover {
       background-color: #0797f7;
       color: #fff;
     }
@@ -51,16 +51,27 @@ main {
 
 .info {
   margin: 3rem auto;
-  max-width: 72ch;
-  background-color: #ffffff61;
-  padding: 1rem;
-  border-radius: 0.5rem;
+  padding: 8rem;
+  background-image: url("./pubblic/v883-mynt-06.jpg");
+  background-size: cover;
+  max-width: 70rem;
+  display: flex;
+  flex-direction: column;
 
   & h2 {
     margin-bottom: 1rem;
+    max-width: 50rem;
   }
 
-  & p {
-    margin-bottom: 0.5rem;
+  & section {
+    max-width: 58rem;
+    margin-bottom: 1rem;
+    background-color: #00c5913e;
+    padding: 0.5rem;
+
+    & p {
+      margin-bottom: 0.5rem;
+      max-width: 90ch;
+    }
   }
 }

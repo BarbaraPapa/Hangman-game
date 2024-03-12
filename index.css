@@ -6,7 +6,10 @@
 
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: #a8f1ba;
   max-width: 1400px;
   margin: 0 auto;
+
+  background-image: url("./src/pubblic/v883-mynt-04.jpg");
+  background-size: cover;
 }
+
